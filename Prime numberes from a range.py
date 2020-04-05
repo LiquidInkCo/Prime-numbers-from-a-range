@@ -55,23 +55,23 @@ def prime_numbers(start,end):
 def user_input():
    a = "Hello"
    try:
-       a = int(input("Enter the starting number of the range (press enter to exit): "))
+       a = int(input("Enter the starting number of the range (press Ctrl-C to exit): "))
    except ValueError:
         print("Not an integer value...")
         user_input()
-   except:
-        print("Have a nice day!")
+   except KeyboardInterrupt:
+        print("\nHave a nice day!")
         sys.exit()
 
 
    b = "Hello"
    try:
-       b = int(input("Enter the ending number of the range (press enter to exit): "))
+       b = int(input("Enter the ending number of the range (press Ctrl-C to exit): "))
    except ValueError:
         print("Not an integer value...")
         user_input()
-   except:
-        print("Have a nice day!")
+   except KeyboardInterrupt:
+        print("\nHave a nice day!")
         sys.exit()
 
    prime_numbers(a,b)
