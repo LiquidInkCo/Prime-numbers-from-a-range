@@ -56,7 +56,7 @@ def user_input():
    a = "Hello"
    try:
        a = int(input("Enter the starting number of the range (press enter to exit): "))
-   except NameError:
+   except ValueError:
         print("Not an integer value...")
         user_input()
    except:
@@ -67,7 +67,7 @@ def user_input():
    b = "Hello"
    try:
        b = int(input("Enter the ending number of the range (press enter to exit): "))
-   except NameError:
+   except ValueError:
         print("Not an integer value...")
         user_input()
    except:
